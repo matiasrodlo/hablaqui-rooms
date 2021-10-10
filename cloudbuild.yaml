@@ -1,0 +1,24 @@
+steps:
+  - name: node:12
+    entrypoint: npm
+    args: ['install']
+    id: 'install'
+    waitFor: ['-']
+  - name: node:12
+    entrypoint: npm
+    args: ['run', 'create-env']
+    env:
+      - 'TWILIO_ACCOUNT_SID=${_TWILIO_ACCOUNT_SID}'
+      - 'TWILIO_API_KEY_SECRET=${_TWILIO_API_KEY_SECRET}'
+      - 'TWILIO_CONVERSATIONS_SERVICE_SID=${_TWILIO_CONVERSATIONS_SERVICE_SID}'
+      - 'TWILIO_AUTH_TOKEN=${_TWILIO_AUTH_TOKEN}'
+    id: 'envvars'
+    waitFor: ['install']
+  - name: node:12
+    entrypoint: npm
+    args: ['run', 'build']
+    waitFor: ['envvars']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
+    id: 'deploy'
+    waitFor: ['envvars', 'install']

@@ -99,6 +99,17 @@ jobs:
           gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
 
       - run: echo $CIRCLE_TAG > build/version.txt
+      - run:
+          name: 'gcloud env'
+          command: |
+            echo TWILIO_ACCOUNT_SID=$TWILIO_ACCOUNT_SID >> .env
+            echo TWILIO_API_KEY_SID=$TWILIO_API_KEY >> .env
+            echo TWILIO_API_KEY_SECRET=$TWILIO_API_SECRET >> .env
+            echo TWILIO_CONVERSATIONS_SERVICE_SID=$TWILIO_CONVERSATIONS_SERVICE_SID >> .env
+            echo TWILIO_AUTH_TOKEN=$TWILIO_AUTH_TOKEN >> .env
+            echo GOOGLE_PROJECT_ID=$GOOGLE_PROJECT_ID >> .env
+            echo GOOGLE_SERVICE_KEY=$GOOGLE_SERVICE_KEY >> .env
+            echo GOOGLE_COMPUTE_ZONE=$GOOGLE_COMPUTE_ZONE >> .env
 
       # - run: gcloud secrets versions access latest --secret=firebase-admin-credentials > server/serviceAccountKey.json
 
