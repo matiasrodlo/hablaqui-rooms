@@ -23,14 +23,14 @@ jobs:
             - ~/.npm
             - ~/.cache
 
-      - run:
-          name: 'Jest Unit Tests'
-          command: npm run test:ci
-          environment:
-            JEST_JUNIT_OUTPUT_DIR: 'test-reports/jest'
-            JEST_JUNIT_OUTPUT_NAME: 'results.xml'
-            JEST_JUNIT_CLASSNAME: '{classname}'
-            JEST_JUNIT_TITLE: '{title}'
+      # - run:
+      #     name: 'Jest Unit Tests'
+      #     command: npm run test:ci
+      #     environment:
+      #       JEST_JUNIT_OUTPUT_DIR: 'test-reports/jest'
+      #       JEST_JUNIT_OUTPUT_NAME: 'results.xml'
+      #       JEST_JUNIT_CLASSNAME: '{classname}'
+      #       JEST_JUNIT_TITLE: '{title}'
 
       - store_artifacts:
           path: coverage
