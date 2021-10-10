@@ -125,7 +125,7 @@ export default function DeviceSelectionScreen({ name, roomName, setStep }: Devic
                 onClick={handleJoin}
                 disabled={disableButtons}
               >
-                Unirse ahora
+                Continuar
               </Button>
             </div>
           </Grid>

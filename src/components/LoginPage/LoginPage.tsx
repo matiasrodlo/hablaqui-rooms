@@ -92,7 +92,6 @@ export default function LoginPage() {
           <Typography variant="h5" className={classes.gutterBottom}>
             Inicia sesión para continuar
           </Typography>
-          <Typography variant="body1">Sign in using your Twilio Google Account</Typography>
           <Button variant="contained" className={classes.googleButton} onClick={login} startIcon={<GoogleLogo />}>
             Inicia sesión con Google
           </Button>

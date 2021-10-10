@@ -143,7 +143,7 @@ export default function Menu(props: { buttonClassName?: string }) {
           <IconContainer>
             <InfoIconOutlined />
           </IconContainer>
-          <Typography variant="body1">About</Typography>
+          <Typography variant="body1">Acerca de esta sala</Typography>
         </MenuItem>
       </MenuContainer>
       <AboutDialog
