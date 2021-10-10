@@ -18,8 +18,9 @@ steps:
   - name: node:12
     entrypoint: npm
     args: ['run', 'build']
+    id: 'build'
     waitFor: ['envvars']
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy']
     id: 'deploy'
-    waitFor: ['envvars', 'install']
+    waitFor: ['envvars', 'install', 'build']
