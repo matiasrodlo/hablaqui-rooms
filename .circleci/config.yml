@@ -62,21 +62,19 @@ jobs:
 
       - store_test_results:
           path: test-reports
-
       # Rebuild app with firebase auth enabled
-      - run:
-          name: 'Build app with Firebase auth enabled'
-          command: |
-            echo REACT_APP_SET_AUTH=firebase >> .env
-            echo REACT_APP_FIREBASE_API_KEY=$REACT_APP_FIREBASE_API_KEY >> .env
-            echo REACT_APP_FIREBASE_AUTH_DOMAIN=$REACT_APP_FIREBASE_AUTH_DOMAIN >> .env
-            echo REACT_APP_FIREBASE_DATABASE_URL=$REACT_APP_FIREBASE_DATABASE_URL >> .env
-            echo REACT_APP_FIREBASE_STORAGE_BUCKET=$REACT_APP_FIREBASE_STORAGE_BUCKET >> .env
-            echo REACT_APP_FIREBASE_MESSAGING_SENDER_ID=$REACT_APP_FIREBASE_MESSAGING_SENDER_ID >> .env
-            echo REACT_APP_GIT_TAG=$CIRCLE_TAG >> .env
-            echo REACT_APP_GIT_COMMIT=$CIRCLE_SHA1 >> .env
-            npm run build
-
+      # - run:
+      #     name: 'Build app with Firebase auth enabled'
+      #     command: |
+      #       echo REACT_APP_SET_AUTH=firebase >> .env
+      #       echo REACT_APP_FIREBASE_API_KEY=$REACT_APP_FIREBASE_API_KEY >> .env
+      #       echo REACT_APP_FIREBASE_AUTH_DOMAIN=$REACT_APP_FIREBASE_AUTH_DOMAIN >> .env
+      #       echo REACT_APP_FIREBASE_DATABASE_URL=$REACT_APP_FIREBASE_DATABASE_URL >> .env
+      #       echo REACT_APP_FIREBASE_STORAGE_BUCKET=$REACT_APP_FIREBASE_STORAGE_BUCKET >> .env
+      #       echo REACT_APP_FIREBASE_MESSAGING_SENDER_ID=$REACT_APP_FIREBASE_MESSAGING_SENDER_ID >> .env
+      #       echo REACT_APP_GIT_TAG=$CIRCLE_TAG >> .env
+      #       echo REACT_APP_GIT_COMMIT=$CIRCLE_SHA1 >> .env
+      #       npm run build
       - persist_to_workspace:
           root: .
           paths:
@@ -85,11 +83,11 @@ jobs:
   deploy:
     docker:
       - image: google/cloud-sdk
-    working_directory: ~/twilio-video-react-app
+    working_directory: ~/hablaqui-rooms
 
     steps:
       - attach_workspace:
-          at: ~/twilio-video-react-app
+          at: ~/hablaqui-rooms
 
       - run: |
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
@@ -97,7 +95,7 @@ jobs:
 
       - run: echo $CIRCLE_TAG > build/version.txt
 
-      - run: gcloud secrets versions access latest --secret=firebase-admin-credentials > server/serviceAccountKey.json
+      # - run: gcloud secrets versions access latest --secret=firebase-admin-credentials > server/serviceAccountKey.json
 
       - run: gcloud app deploy -q
 
