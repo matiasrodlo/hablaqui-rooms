@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hablaqui-rooms",
+  "private_key_id": "2ff396487faaac7369936551ffbd48228d6ba440",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCaaMR4NGWHJMOh\nF+OlkuVy+1Vs/HJkXRPIsqtdJF8R8jgWR6w5zKF2HKTH2KrBRUvwf1zsnbpSLGmf\nbe2a1XOlqcYkEVD1p5UsCfGdacKPjvhDrls8NPVny8vX6T89JGBfXOdcoeQvRrLV\nZ2r+XUqtNzd308HDjUOLZJ05moUWRUGUEoqZDeRswk07otKcDbt2GWByNt+9ks7j\nh+vWllPkI+MexlWjNux/Hqg9ZAJ5WgFH+NRhzjdhBV7JyOpJAY4vVugJEIJj268L\nesQ4Qk+u6OI58YyjscgA73+OYJJsK7M6k700NvHpzvaGnHdZRHeDcv7Yqe3wxysE\nmkzZnKHTAgMBAAECggEAQ+jzC+kDhDILpjSjBwW5y121vwayauiy1FCcZI0kEPkG\naOoh2ZPhqVhEsq5cvz7yfLYPUPO35/8nfxpyZ2gcgk5OWjuRb1FCnslKzhAfJVNc\nZivvbWXfTsTHhNDNYt82UYrDKK789Dv0WD4xROkT+GWyDA4CiLZ+7/YS3ixS/y1M\nZFuZ3CwxwDrTusbv93phbgO37uTEYVUn4WHGfDKR32fEfCQWIIDj2L7OPR4atvLC\nijlENmFbvxbyO2zbLA35so6VpJRhgMhzTcPia7MZ4eM2xA1y8VWdViu3ZWKxmlwG\nTiqs79UhIpU77w+Z04rTsWdydjrvxs/QHQ4SocGHxQKBgQDRFmjA2SkjedGptb9u\ni11MEPHRPzz9mLyYS0IkLuoQkzopl0/cTXqUuHttMbpPyHs41WHFVIYCXERXZ/TC\n4dvVE9Yz5O7T8DU0Rn+qdnXH7gfiGpc5L2cnGKVe8/ciWw/L2uZlQBpOFP+AZj2s\npq0649AUYLYFJDboABPywQhtBwKBgQC9Db3FFHEerpu/lotWC9h6lR5XN5adgpdP\nw9p5HEQjbmKuKnird265HPK0JuCsI+WIfJMjW8OZP5Rxz98ZhGuA/1PimFj+3n8z\nIfYKdkvBL8mdHvJiWceAvpJvyDfXwCo/BmPgzmd+pp4+YNHRpW+JyQTnXyo+JR8f\nqBZkitb91QKBgDhbovbAUi9myZXGEIh6djZnptaxBf6RKdyfBH/+SUcYeCf3yiXm\nmHD33QUMz1xr/JLQKV9oLgr61cz9j2LsQDYJ98XbImjsKVsi2YyYC51NUsCmTDa0\nyUgng4O5nNac1wAqy8lk4vJDBK+WX29nKfBisZacjtOJ9GbKhpX7ZAsHAoGAXGnv\nLfuEIF9yOwE4M2Ou+p0SK8g8k9pWZON0VGeA12EKU+DnA8pqEYsZCP9ILF2PwlxD\nALHGt47g3ZGjmTGl63TkaIvYVR4mR7R+NTcGaPUXNPr/uRvx7fk6U/IneguxmwVg\npW/AH6ULDar+ZeDc2Rmuj/txBtfWkv7zk0pbNdECgYEArHkUnQqh4+YOUBx1/Lmt\nhYwZwi47WCFHXn595VXcTiWG/txFX6xNsKx0sCmmT0wHRWpK+/pKSzyTw4Rg5/bS\n5FBRgkwLXDmbbKpJKY0FeNnfdz8VchiNQl4HO4Itpyxbgr942IGdCp4u8HQA7Ilg\n9VXTBehEdJ11y3UIZLx8w9Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "circleci@hablaqui-rooms.iam.gserviceaccount.com",
+  "client_id": "104625409574275055858",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/circleci%40hablaqui-rooms.iam.gserviceaccount.com"
+}
