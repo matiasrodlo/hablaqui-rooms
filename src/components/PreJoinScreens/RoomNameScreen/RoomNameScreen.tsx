@@ -97,7 +97,7 @@ export default function RoomNameScreen({ name, roomName, setName, setRoomName, h
             disabled={!name || !roomName}
             className={classes.continueButton}
           >
-            Continue
+            Continuar
           </Button>
         </Grid>
       </form>
