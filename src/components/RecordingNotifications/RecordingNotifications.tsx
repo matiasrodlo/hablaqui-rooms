@@ -46,26 +46,26 @@ export default function RecordingNotifications() {
         open={activeSnackbar === Snackbars.recordingStarted}
         handleClose={() => setActiveSnackbar(Snackbars.none)}
         variant="info"
-        headline="Recording has started."
+        headline="Comenzó la grabación."
         message=""
       />
       <Snackbar
         open={activeSnackbar === Snackbars.recordingInProgress}
         handleClose={() => setActiveSnackbar(Snackbars.none)}
         variant="info"
-        headline="Recording is in progress."
+        headline="Grabación en proceso."
         message=""
       />
       <Snackbar
         open={activeSnackbar === Snackbars.recordingFinished}
-        headline="Recording Complete"
+        headline="Grabación completada"
         message={
           <>
-            You can view the recording in the{' '}
+            Puedes ver la grabación en la{' '}
             <Link target="_blank" rel="noopener" href="https://www.twilio.com/console/video/logs/recordings">
-              Twilio Console
+              Consola de Twilio
             </Link>
-            . Recordings will be available once this room has ended.
+            . La grabación estará disponible una vez terminada esta reunión.
           </>
         }
         variant="info"

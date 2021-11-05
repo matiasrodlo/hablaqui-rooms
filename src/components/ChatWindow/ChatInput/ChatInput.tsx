@@ -115,9 +115,9 @@ export default function ChatInput({ conversation, isChatWindowOpen }: ChatInputP
         .sendMessage(formData)
         .catch(e => {
           if (e.code === 413) {
-            setFileSendError('File size is too large. Maximum file size is 150MB.');
+            setFileSendError('El archivo es muy grande. El tamaño máximo es de 150MB.');
           } else {
-            setFileSendError('There was a problem uploading the file. Please try again.');
+            setFileSendError('Ocurrió un error al intentar subir el archivo. Intenta nuevamente.');
           }
           console.log('Problem sending file: ', e);
         })

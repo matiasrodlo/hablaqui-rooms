@@ -75,19 +75,19 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
 
   return (
     <Dialog open={open} onClose={onClose} classes={{ paper: classes.paper }}>
-      <DialogTitle>Connection Settings</DialogTitle>
+      <DialogTitle>Configuraciones de conexión</DialogTitle>
       <Divider />
       <DialogContent className={classes.container}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography hidden={!isDisabled} variant="body2">
-              These settings cannot be changed when connected to a room.
+              Estas configuraciones no se pueden cambiar una vez dentro de la sala.
             </Typography>
           </Grid>
 
           <Grid item sm={6} xs={12}>
             <FormControl className={classes.formControl}>
-              <InputLabel id={inputLabels.dominantSpeakerPriority}>Dominant Speaker Priority:</InputLabel>
+              <InputLabel id={inputLabels.dominantSpeakerPriority}>Prioridad de hablantes:</InputLabel>
               <Select
                 fullWidth
                 disabled={isDisabled}
@@ -96,15 +96,15 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 value={withDefault(settings.dominantSpeakerPriority)}
                 onChange={handleChange}
               >
-                <MenuItem value="low">Low</MenuItem>
-                <MenuItem value="standard">Standard</MenuItem>
-                <MenuItem value="high">High</MenuItem>
-                <MenuItem value="default">Server Default</MenuItem>
+                <MenuItem value="low">Bajo</MenuItem>
+                <MenuItem value="standard">Normal</MenuItem>
+                <MenuItem value="high">Alto</MenuItem>
+                <MenuItem value="default">Predeterminado</MenuItem>
               </Select>
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <InputLabel id={inputLabels.trackSwitchOffMode}>Track Switch Off Mode:</InputLabel>
+              <InputLabel id={inputLabels.trackSwitchOffMode}>Ahorro de datos de video:</InputLabel>
               <Select
                 fullWidth
                 disabled={isDisabled}
@@ -113,15 +113,15 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 value={withDefault(settings.trackSwitchOffMode)}
                 onChange={handleChange}
               >
-                <MenuItem value="predicted">Predicted</MenuItem>
-                <MenuItem value="detected">Detected</MenuItem>
-                <MenuItem value="disabled">Disabled</MenuItem>
-                <MenuItem value="default">Server Default</MenuItem>
+                <MenuItem value="predicted">Predecir</MenuItem>
+                <MenuItem value="detected">Detectar</MenuItem>
+                <MenuItem value="disabled">Deshabilitar</MenuItem>
+                <MenuItem value="default">Predeterminado</MenuItem>
               </Select>
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <InputLabel id={inputLabels.bandwidthProfileMode}>Mode:</InputLabel>
+              <InputLabel id={inputLabels.bandwidthProfileMode}>Modo:</InputLabel>
               <Select
                 fullWidth
                 disabled={isDisabled}
@@ -130,16 +130,16 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 value={withDefault(settings.bandwidthProfileMode)}
                 onChange={handleChange}
               >
-                <MenuItem value="grid">Grid</MenuItem>
-                <MenuItem value="collaboration">Collaboration</MenuItem>
-                <MenuItem value="presentation">Presentation</MenuItem>
-                <MenuItem value="default">Server Default</MenuItem>
+                <MenuItem value="grid">Galeria</MenuItem>
+                <MenuItem value="collaboration">Colaboración</MenuItem>
+                <MenuItem value="presentation">Presentación</MenuItem>
+                <MenuItem value="default">Predeterminado</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item sm={6} xs={12}>
             <FormControl className={classes.formControl}>
-              <InputLabel id={inputLabels.clientTrackSwitchOffControl}>Client Track Switch Off Control:</InputLabel>
+              <InputLabel id={inputLabels.clientTrackSwitchOffControl}>Apagar videos remotos:</InputLabel>
               <Select
                 fullWidth
                 disabled={isDisabled}
@@ -148,14 +148,14 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 value={withDefault(settings.clientTrackSwitchOffControl)}
                 onChange={handleChange}
               >
-                <MenuItem value="auto">Auto</MenuItem>
+                <MenuItem value="auto">Automático</MenuItem>
                 <MenuItem value="manual">Manual</MenuItem>
-                <MenuItem value="default">Default</MenuItem>
+                <MenuItem value="default">Predeterminado</MenuItem>
               </Select>
             </FormControl>
 
             <FormControl className={classes.formControl}>
-              <InputLabel id={inputLabels.contentPreferencesMode}>Content Preferences Mode:</InputLabel>
+              <InputLabel id={inputLabels.contentPreferencesMode}>Calidad de video:</InputLabel>
               <Select
                 fullWidth
                 disabled={isDisabled}
@@ -164,9 +164,9 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 value={withDefault(settings.contentPreferencesMode)}
                 onChange={handleChange}
               >
-                <MenuItem value="auto">Auto</MenuItem>
+                <MenuItem value="auto">Automático</MenuItem>
                 <MenuItem value="manual">Manual</MenuItem>
-                <MenuItem value="default">Default</MenuItem>
+                <MenuItem value="default">Predeterminado</MenuItem>
               </Select>
             </FormControl>
 
@@ -176,7 +176,7 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
                 fullWidth
                 id={inputLabels.maxAudioBitrate}
                 label="Max Audio Bitrate"
-                placeholder="Leave blank for no limit"
+                placeholder="Dejar en blanco para sin límites"
                 name={inputLabels.maxAudioBitrate}
                 value={withDefault(settings.maxAudioBitrate)}
                 onChange={handleNumberChange}
@@ -188,7 +188,7 @@ export default function ConnectionOptionsDialog({ open, onClose }: { open: boole
       <Divider />
       <DialogActions>
         <Button className={classes.button} color="primary" variant="contained" onClick={onClose}>
-          Done
+          Guardar
         </Button>
       </DialogActions>
     </Dialog>

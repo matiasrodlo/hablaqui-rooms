@@ -196,7 +196,7 @@ export default function ParticipantInfo({
         {isParticipantReconnecting && (
           <div className={classes.reconnectingContainer}>
             <Typography variant="body1" className={classes.typeography}>
-              Reconnecting...
+              Reconectando...
             </Typography>
           </div>
         )}

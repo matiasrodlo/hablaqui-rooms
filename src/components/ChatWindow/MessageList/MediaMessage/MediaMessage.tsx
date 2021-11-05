@@ -72,7 +72,7 @@ export default function FileMessage({ media }: MediaMessageProps) {
       </div>
       <div className={classes.mediaInfo}>
         <p className={classes.filename}>{media.filename}</p>
-        <p className={classes.size}>{formatFileSize(media.size)} - Click to open</p>
+        <p className={classes.size}>{formatFileSize(media.size)} - Haz click para abrir</p>
       </div>
     </div>
   );

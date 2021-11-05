@@ -42,7 +42,7 @@ const UserMenu: React.FC = () => {
     return (
       <div className={classes.userContainer}>
         <Link onClick={handleSignOut} className={classes.logoutLink}>
-          Logout
+          Cerrar sesión
         </Link>
       </div>
     );
@@ -71,7 +71,7 @@ const UserMenu: React.FC = () => {
           }}
         >
           <MenuItem onClick={handleSignOut}>
-            <Typography variant="body1">Logout</Typography>
+            <Typography variant="body1">Cerrar sesión</Typography>
           </MenuItem>
         </Menu>
       </div>

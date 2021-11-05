@@ -106,7 +106,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             <IconContainer>
               <FlipCameraIcon />
             </IconContainer>
-            <Typography variant="body1">Flip Camera</Typography>
+            <Typography variant="body1">Cambiar cámara</Typography>
           </MenuItem>
         )}
         {roomType !== 'peer-to-peer' && roomType !== 'go' && (
@@ -123,7 +123,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             data-cy-recording-button
           >
             <IconContainer>{isRecording ? <StopRecordingIcon /> : <StartRecordingIcon />}</IconContainer>
-            <Typography variant="body1">{isRecording ? 'Stop' : 'Start'} Recording</Typography>
+            <Typography variant="body1">{isRecording ? 'Detener' : 'Iniciar'} Grabando</Typography>
           </MenuItem>
         )}
         <Hidden smDown>

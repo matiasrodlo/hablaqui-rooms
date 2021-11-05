@@ -24,7 +24,7 @@ function ErrorDialog({ dismissError, error }: PropsWithChildren<ErrorDialogProps
         <DialogContentText>{enhancedMessage}</DialogContentText>
         {Boolean(code) && (
           <pre>
-            <code>Error Code: {code}</code>
+            <code>Código del error: {code}</code>
           </pre>
         )}
       </DialogContent>

@@ -26,7 +26,7 @@ export default function ToggleVideoButton(props: { disabled?: boolean; className
       disabled={!hasVideoInputDevices || props.disabled}
       startIcon={isVideoEnabled ? <VideoOnIcon /> : <VideoOffIcon />}
     >
-      {!hasVideoInputDevices ? 'No Video' : isVideoEnabled ? 'Detener video' : 'Iniciar Video'}
+      {!hasVideoInputDevices ? 'No hay video' : isVideoEnabled ? 'Detener video' : 'Iniciar video'}
     </Button>
   );
 }

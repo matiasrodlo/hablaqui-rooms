@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'rgb(40, 42, 43)',
+    background: 'rgb(255, 255, 255)',
     height: '100%',
   },
   container: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '888px',
     height: '379px',
     borderRadius: '8px',
-    boxShadow: '0px 2px 4px 0px rgba(40, 42, 43, 0.3)',
+    boxShadow: '0px 8px 16px 0px rgba(40, 42, 43, 0.3)',
     overflow: 'hidden',
     position: 'relative',
     margin: 'auto',
@@ -108,7 +108,7 @@ const IntroContainer = (props: IntroContainerProps) => {
             <div className={classes.logoContainer}>
               <VideoLogo />
               <Typography variant="h6" className={classes.title}>
-                Videoconferencias de Hablaquí
+                Salas de Hablaquí
               </Typography>
             </div>
           </div>

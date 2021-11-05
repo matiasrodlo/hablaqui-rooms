@@ -153,8 +153,8 @@ export default function MainParticipantInfo({ participant, children }: MainParti
             <AudioLevelIndicator audioTrack={audioTrack} />
             <Typography variant="body1" color="inherit">
               {participant.identity}
-              {isLocal && ' (You)'}
-              {screenSharePublication && ' - Screen'}
+              {isLocal && ' (Tú)'}
+              {screenSharePublication && ' - Pantalla'}
             </Typography>
           </div>
           <NetworkQualityLevel participant={participant} />
@@ -167,7 +167,7 @@ export default function MainParticipantInfo({ participant, children }: MainParti
             <div className={classes.recordingIndicator}>
               <div className={classes.circle}></div>
               <Typography variant="body1" color="inherit" data-cy-recording-indicator>
-                Recording
+                Grabando
               </Typography>
             </div>
           </Tooltip>
@@ -181,7 +181,7 @@ export default function MainParticipantInfo({ participant, children }: MainParti
       {isParticipantReconnecting && (
         <div className={classes.reconnectingContainer}>
           <Typography variant="body1" style={{ color: 'white' }}>
-            Reconnecting...
+            Reconectando...
           </Typography>
         </div>
       )}

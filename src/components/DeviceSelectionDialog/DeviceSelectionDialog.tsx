@@ -74,7 +74,7 @@ export default function DeviceSelectionDialog({ open, onClose }: { open: boolean
       <Divider />
       <DialogActions>
         <Button color="primary" variant="contained" className={classes.button} onClick={onClose}>
-          Done
+          Guardar
         </Button>
       </DialogActions>
     </Dialog>
