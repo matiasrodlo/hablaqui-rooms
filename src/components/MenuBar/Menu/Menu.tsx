@@ -87,7 +87,7 @@ export default function Menu(props: { buttonClassName?: string }) {
           </IconContainer>
           <Typography variant="body1">Configuraciones de audio y video</Typography>
         </MenuItem>
-        {isSupported && (
+        {/* {isSupported && (
           <MenuItem
             onClick={() => {
               setIsBackgroundSelectionOpen(true);
@@ -100,7 +100,7 @@ export default function Menu(props: { buttonClassName?: string }) {
             </IconContainer>
             <Typography variant="body1">Fondos de video</Typography>
           </MenuItem>
-        )}
+        )} */}
         {flipCameraSupported && (
           <MenuItem disabled={flipCameraDisabled} onClick={toggleFacingMode}>
             <IconContainer>

@@ -4,7 +4,7 @@ import { ErrorCallback } from '../../types';
 import { SelectedParticipantProvider } from './useSelectedParticipant/useSelectedParticipant';
 
 import AttachVisibilityHandler from './AttachVisibilityHandler/AttachVisibilityHandler';
-import useBackgroundSettings, { BackgroundSettings } from './useBackgroundSettings/useBackgroundSettings';
+// import useBackgroundSettings, { BackgroundSettings } from './useBackgroundSettings/useBackgroundSettings';
 import useHandleRoomDisconnection from './useHandleRoomDisconnection/useHandleRoomDisconnection';
 import useHandleTrackPublicationFailed from './useHandleTrackPublicationFailed/useHandleTrackPublicationFailed';
 import useLocalTracks from './useLocalTracks/useLocalTracks';
@@ -34,8 +34,8 @@ export interface IVideoContext {
   getAudioAndVideoTracks: () => Promise<void>;
   isBackgroundSelectionOpen: boolean;
   setIsBackgroundSelectionOpen: (value: boolean) => void;
-  backgroundSettings: BackgroundSettings;
-  setBackgroundSettings: (settings: BackgroundSettings) => void;
+  // backgroundSettings: BackgroundSettings;
+  // setBackgroundSettings: (settings: BackgroundSettings) => void;
 }
 
 export const VideoContext = createContext<IVideoContext>(null!);
@@ -84,7 +84,7 @@ export function VideoProvider({ options, children, onError = () => {} }: VideoPr
   const videoTrack = localTracks.find(track => !track.name.includes('screen') && track.kind === 'video') as
     | LocalVideoTrack
     | undefined;
-  const [backgroundSettings, setBackgroundSettings] = useBackgroundSettings(videoTrack, room);
+  // const [backgroundSettings, setBackgroundSettings] = useBackgroundSettings(videoTrack, room);
 
   return (
     <VideoContext.Provider
@@ -103,8 +103,6 @@ export function VideoProvider({ options, children, onError = () => {} }: VideoPr
         getAudioAndVideoTracks,
         isBackgroundSelectionOpen,
         setIsBackgroundSelectionOpen,
-        backgroundSettings,
-        setBackgroundSettings,
       }}
     >
       <SelectedParticipantProvider room={room}>{children}</SelectedParticipantProvider>

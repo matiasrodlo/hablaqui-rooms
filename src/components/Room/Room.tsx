@@ -4,7 +4,7 @@ import { makeStyles, Theme } from '@material-ui/core';
 import ChatWindow from '../ChatWindow/ChatWindow';
 import ParticipantList from '../ParticipantList/ParticipantList';
 import MainParticipant from '../MainParticipant/MainParticipant';
-import BackgroundSelectionDialog from '../BackgroundSelectionDialog/BackgroundSelectionDialog';
+//import BackgroundSelectionDialog from '../BackgroundSelectionDialog/BackgroundSelectionDialog';
 import useChatContext from '../../hooks/useChatContext/useChatContext';
 import useVideoContext from '../../hooks/useVideoContext/useVideoContext';
 
@@ -41,7 +41,7 @@ export default function Room() {
       <MainParticipant />
       <ParticipantList />
       <ChatWindow />
-      <BackgroundSelectionDialog />
+      {/* <BackgroundSelectionDialog /> */}
     </div>
   );
 }
