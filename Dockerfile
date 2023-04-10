@@ -44,7 +44,4 @@ ENV REACT_APP_FIREBASE_MESSAGING_SENDER_ID=${REACT_APP_FIREBASE_MESSAGING_SENDER
 # Se construye el proyecto
 RUN npm run build
 
-# Se expone el puerto 4000
-EXPOSE 4000
-
 ENTRYPOINT [ "npm", "run", "start" ]

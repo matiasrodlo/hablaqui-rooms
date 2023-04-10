@@ -1,0 +1,32 @@
+version: "3.8"
+# Se especifican los servicios que se van a ejecutar        
+services:
+  rooms:
+   # Se especifica el dockerfile que se va a utilizar
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      network: "host"
+      args:
+        - TWILIO_ACCOUNT_SID 
+        - TWILIO_API_KEY_SECRET
+        - TWILIO_API_KEY_SID
+        - TWILIO_CONVERSATIONS_SERVICE_SID
+        - TWILIO_AUTH_TOKEN
+        - REACT_APP_FIREBASE_API_KEY
+        - REACT_APP_FIREBASE_AUTH_DOMAIN
+        - REACT_APP_FIREBASE_DATABASE_URL
+        - REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+    ports:
+      - "8081:8081"
+    container_name: rooms
+    environment:
+      - TWILIO_ACCOUNT_SID=$TWILIO_ACCOUNT_SID
+      - TWILIO_API_KEY_SECRET=$TWILIO_API_KEY_SECRET
+      - TWILIO_API_KEY_SID=$TWILIO_API_KEY_SID
+      - TWILIO_CONVERSATIONS_SERVICE_SID=$TWILIO_CONVERSATIONS_SERVICE_SID
+      - TWILIO_AUTH_TOKEN=$TWILIO_AUTH_TOKEN
+      - REACT_APP_FIREBASE_API_KEY=$REACT_APP_FIREBASE_API_KEY
+      - REACT_APP_FIREBASE_AUTH_DOMAIN=$REACT_APP_FIREBASE_AUTH_DOMAIN
+      - REACT_APP_FIREBASE_DATABASE_URL=$REACT_APP_FIREBASE_DATABASE_URL
+      - REACT_APP_FIREBASE_MESSAGING_SENDER_ID=$REACT_APP_FIREBASE_MESSAGING_SENDER_ID
