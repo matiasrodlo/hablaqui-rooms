@@ -1,18 +1,59 @@
-# Twilio Video React App
+# Hablaqui Video Rooms
 
-[![CircleCI](https://circleci.com/gh/twilio/twilio-video-app-react.svg?style=svg)](https://circleci.com/gh/twilio/twilio-video-app-react)
+This is the video room component of [Hablaqui](https://github.com/matiasrodlo/hablaqui), a mental health marketplace and SaaS platform connecting users with a network of over 200 certified specialists. This component provides secure video consultations between patients and healthcare providers.
 
-## What is it
+![image](https://github.com/user-attachments/assets/58fc654c-52d9-420d-99fa-6e82e203bc13)
 
-This application demonstrates a multi-party video application built with [Twilio's Programmable Video JS SDK](https://github.com/twilio/twilio-video.js), [Twilio's Conversations JS SDK](https://www.npmjs.com/package/@twilio/conversations), and [Create React App](https://github.com/facebook/create-react-app).
+## Project Structure
 
-- Deploy to [Twilio Serverless](https://www.twilio.com/docs/runtime/functions-assets-api) in just a few minutes
-- No other infrastructure is required
-- No code changes are required before your first deploy
-- There is no cost associated with deploying the app
-- Go Rooms usage is free, however [standard usage charges](https://www.twilio.com/video/pricing) apply for Programmable Video when using the app with all other Room types. The chat feature is built using the Conversations API and is free-of-cost up to 200 monthly active users, [standard usage charges](https://www.twilio.com/conversations/pricing) apply thereafter.
+```
+hablaqui-rooms/
+├── config/                 # Configuration files
+│   ├── tsconfig.json      # TypeScript configuration
+│   ├── jest.config.js     # Jest testing configuration
+│   └── .prettierrc        # Code formatting rules
+│
+├── docs/                   # Documentation
+│   └── CHANGELOG.md       # Version history and changes
+│
+├── scripts/               # Build and utility scripts
+│   ├── ci/               # CI/CD configuration
+│   │   ├── .circleci/    # CircleCI configuration
+│   │   ├── .github/      # GitHub Actions configuration
+│   │   └── cypress.json  # Cypress testing configuration
+│   │
+│   └── deploy/           # Deployment configurations
+│       ├── app.yaml      # App Engine configuration
+│       ├── buildspec.yml # AWS CodeBuild configuration
+│       └── cloudbuild.yaml # Google Cloud Build configuration
+│
+├── src/                   # Source code
+├── public/               # Static assets
+├── server/              # Server-side code
+├── cypress/             # End-to-end tests
+├── images/              # Image assets
+├── disabled/            # Disabled features
+│
+├── .gitignore           # Git ignore rules
+├── Dockerfile           # Docker configuration
+├── LICENSE              # License information
+├── package.json         # Project dependencies
+└── README.md           # Project documentation
+```
 
-![App Preview](https://user-images.githubusercontent.com/12685223/94631109-cfca1c80-0284-11eb-8b72-c97276cf34e4.png)
+## Features
+
+The Video app has the following features:
+
+- [x] Secure video conferencing with real-time video and audio
+- [x] Chat support for textual and file-based messaging
+- [x] Enable/disable camera
+- [x] Mute/unmute mic
+- [x] Screen sharing
+- [x] [Dominant speaker](https://www.twilio.com/docs/video/detecting-dominant-speaker) indicator
+- [x] [Network quality](https://www.twilio.com/docs/video/using-network-quality-api) indicator
+- [x] Defines participant bandwidth usage with the [Bandwidth Profile API](https://www.twilio.com/docs/video/tutorials/using-bandwidth-profile-api)
+- [x] Start and stop recording with the [Recording Rules API](https://www.twilio.com/docs/video/api/recording-rules)
 
 ## Prerequisites
 
@@ -96,20 +137,6 @@ _Peer-to-peer_ - Although up to ten participants can join a room using the Peer-
 _Go_ - The Go room type provides a similar Peer-to-peer video app experience except for a smaller limit of two participants. If more than two participants join a room with this room type, then the video app will present an error.
 
 If the max number of participants is exceeded, then the video app will present an error for all room types.
-
-## Features
-
-The Video app has the following features:
-
-- [x] Video conferencing with real-time video and audio
-- [x] Chat support for textual and file-based messaging
-- [x] Enable/disable camera
-- [x] Mute/unmute mic
-- [x] Screen sharing
-- [x] [Dominant speaker](https://www.twilio.com/docs/video/detecting-dominant-speaker) indicator
-- [x] [Network quality](https://www.twilio.com/docs/video/using-network-quality-api) indicator
-- [x] Defines participant bandwidth usage with the [Bandwidth Profile API](https://www.twilio.com/docs/video/tutorials/using-bandwidth-profile-api)
-- [x] Start and stop recording with the [Recording Rules API](https://www.twilio.com/docs/video/api/recording-rules)
 
 ## Browser Support
 
