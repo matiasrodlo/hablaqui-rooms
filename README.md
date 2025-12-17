@@ -6,7 +6,7 @@ A secure video-conferencing component for healthcare consultations, part of [Hab
 
 ## Features
 
-Real-time video and audio • Screen sharing • Chat • Network quality indicators • Recording • Bandwidth optimization
+Real-time video and audio, screen sharing, chat, network quality indicators, recording, bandwidth optimization
 
 ## Quick Start
 
