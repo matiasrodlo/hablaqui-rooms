@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import AboutDialog from '../../AboutDialog/AboutDialog';
-import BackgroundIcon from '../../../icons/BackgroundIcon';
 import DeviceSelectionDialog from '../../DeviceSelectionDialog/DeviceSelectionDialog';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import InfoIconOutlined from '../../../icons/InfoIconOutlined';
@@ -19,7 +18,6 @@ import {
   Typography,
   Hidden,
 } from '@material-ui/core';
-import { isSupported } from '@twilio/video-processors';
 
 import { useAppState } from '../../../state';
 import useChatContext from '../../../hooks/useChatContext/useChatContext';
@@ -46,7 +44,7 @@ export default function Menu(props: { buttonClassName?: string }) {
   const { isFetching, updateRecordingRules, roomType } = useAppState();
   const { setIsChatWindowOpen } = useChatContext();
   const isRecording = useIsRecording();
-  const { room, setIsBackgroundSelectionOpen } = useVideoContext();
+  const { room } = useVideoContext();
 
   const anchorRef = useRef<HTMLButtonElement>(null);
   const { flipCameraDisabled, toggleFacingMode, flipCameraSupported } = useFlipCameraToggle();
@@ -87,20 +85,6 @@ export default function Menu(props: { buttonClassName?: string }) {
           </IconContainer>
           <Typography variant="body1">Configuraciones de audio y video</Typography>
         </MenuItem>
-        {/* {isSupported && (
-          <MenuItem
-            onClick={() => {
-              setIsBackgroundSelectionOpen(true);
-              setIsChatWindowOpen(false);
-              setMenuOpen(false);
-            }}
-          >
-            <IconContainer>
-              <BackgroundIcon />
-            </IconContainer>
-            <Typography variant="body1">Fondos de video</Typography>
-          </MenuItem>
-        )} */}
         {flipCameraSupported && (
           <MenuItem disabled={flipCameraDisabled} onClick={toggleFacingMode}>
             <IconContainer>
